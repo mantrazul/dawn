@@ -1,7 +1,7 @@
 const CONFIG = new Config({
   crypto: {
-    coin: 'ETH',
-    currency: 'USD',
+    coin: 'USDT',
+    currency: 'BRL',
     refreshIn: 10
   },
   overrideStorage: true, // override localStorage with fixed userconfig values
@@ -30,78 +30,74 @@ const CONFIG = new Config({
   openLastVisitedTab: false,
   tabs: [
     {
-      name: 'boards',
+      name: 'home',
       background_url: 'src/img/banners/bg-1.gif',
       categories: [{
         name: 'fun',
         links: [
           {
-            url: 'https://4chan.org/wsg/',
-            name: '/wsg/'
+            url: 'https://youtu.be/',
+            icon: 'brand-youtube',
+            icon_color: '#996767'
           },
           {
-            name: '/out/',
-            url: 'https://4chan.org/out',
-            icon: 'leaf',
+            url: 'https://www.twitch.tv/',
+            icon: 'brand-twitch',
+            icon_color: '#806799'
+          },
+          {
+            url: 'https://www.disneyplus.com/pt-br/home',
+            icon: 'brand-disney',
+            icon_color: '#677e99'
+          },
+        ]
+      },
+      {
+        name: 'forbidden',
+        links: [
+          {
+            name: '/u/',
+            url: 'https://4chan.org/u',
+            icon: 'forbid-2',
             icon_color: '#64876d'
           },
           {
-            name: '/lit/',
-            url: 'https://4chan.org/lit/',
-            icon: 'book'
-          },
-          {
-            name: '/v/',
-            url: 'https://4chan.org/v/',
-            icon: 'device-gamepad',
-            icon_color: '#8b647b'
-          },
-          {
-            name: '/p/',
-            url: 'https://4chan.org/p/',
-            icon: 'camera'
+            name: 'mangago',
+            url: 'https://anon.cafe/comfy/catalog.html',            icon: 'forbid-2',
+            icon_color: '#877764'
           }
         ]
       },
       {
-        name: 'Comfy',
+        name: 'useful',
         links: [
           {
-            name: '/lounge/',
-            url: 'https://sushigirl.us/lounge/catalog.html'
+            url: 'https://mail.google.com/mail/u/0/',
+            icon: 'brand-gmail',
+            icon_color: '#876464'
           },
           {
-            name: '/comfy/',
-            url: 'https://anon.cafe/comfy/catalog.html'
-          }
+            url: 'https://drive.google.com/drive/my-drive',
+            icon: 'brand-google-drive',
+            icon_color: '#877764'
+          },
+          {
+            url: 'https://web.whatsapp.com/',
+            icon: 'brand-whatsapp',
+            icon_color: '#64876d'
+          },
+          {
+            url: 'https://tumblr.com/',
+            icon: 'brand-tumblr',
+            icon_color: '#2d3c52'
+          },
+          {
+            url: 'https://twitter.com/',
+            icon: 'brand-twitter',
+            icon_color: '#5c8ead'
+          },
         ]
       },
-      {
-        name: 'Technology',
-        links: [
-          {
-            name: '/g/',
-            url: 'https://4chan.org/g/',
-          },
-          {
-            name: '/Δ/',
-            url: 'https://archive.arisuchan.jp/%CE%94/catalog.html'
-          },
-          {
-            name: '/λ/',
-            url: 'https://www.lainchan.org/%CE%BB/catalog.html'
-          },
-          {
-            name: '/sec/',
-            url: 'https://www.lainchan.org/sec/catalog.html'
-          },
-          {
-            name: '/prog/',
-            url: 'https://boards.420chan.org/prog/',
-            icon: 'code'
-          }
-        ]
-      }
       ]
     },
     {
@@ -143,67 +139,5 @@ const CONFIG = new Config({
         }
       ]
     },
-    {
-      name: 'tech',
-      background_url: 'src/img/banners/bg-3.gif',
-      categories: [
-        {
-          name: 'subreddits',
-          links: [
-            {
-              name: 'r/startpages/',
-              url: 'https://www.reddit.com/r/startpages/'
-            },
-            {
-              name: 'r/unixporn',
-              url: 'https://www.reddit.com/r/unixporn/'
-            },
-            {
-              name: 'r/mechkbds/',
-              url: 'https://www.reddit.com/r/MechanicalKeyboards/',
-              icon: 'keyboard',
-              icon_color: '#a57685'
-            },
-            {
-              name: 'r/programming',
-              url: 'https://www.reddit.com/r/programming/'
-            }
-          ]
-        },
-        {
-          name: 'blogs',
-          links: [
-            {
-              name: 'fasterthanli',
-              url: 'https://fasterthanli.me/articles',
-              icon: 'anchor'
-            },
-            {
-              name: 'dev.to',
-              url: 'https://dev.to'
-            },
-            {
-              name: 'mataroa.blog',
-              url: 'https://collection.mataroa.blog',
-            }
-          ]
-        },
-        {
-          name: 'misc',
-          links: [
-            {
-              name: 'post office',
-              url: 'http://afternoon.dynu.com/letterbox.html',
-              icon: 'mailbox'
-            },
-            {
-              name: 'rust docs',
-              url: 'https://doc.rust-lang.org/book/',
-              icon: 'notebook',
-              icon_color: '#977a3a'
-            }
-          ]
-        }
-      ]
-    }]
+  ]
 });
